@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1 id="título">Cadastro de DEVs</h1>
-    <p id="subtitulo">Complete suas informações</p>
+    <h2 id="subtitulo">Complete suas informações</p>
     <br>
     <form>
         <fieldset>
@@ -59,10 +59,24 @@
         </fieldset>
         <fieldset>
             <legend>Dados Profissionais</legend>
-            <label for="empresa">Empresa<br></label>
-                <input type="text", name="empresa" id="empresa" required><br>
-            <label for="dtadmss">Data de Admissão<br></label>
-                <input type="date" name="dtadmss"><br>
+            <div class="campo">
+                <label>De qual lado da aplicação você desenvolve?</label>
+                <label><input type="radio" name="devweb" value="frontend" checked>Front-end</label>
+                <label><input type="radio" name="devweb" value="backend">Back-end</label>
+                <label><input type="radio" name="devweb" value="fullstack">Fullstack</label>
+            </div>
+            <div class="campo">
+                <label for="senioridade"><strong>Senioridade</strong></label>
+                    <select id="senioridade" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option>Júnior</option>
+                        <option>Pleno</option>
+                        <option>Sênior</option>
+                    </select>
+            </div>
+            <div>
+                <button class="botao" type="submit" onsubmit="">Concluído</button>
+            </div>
         </fieldset>
     </form>
 </body>
